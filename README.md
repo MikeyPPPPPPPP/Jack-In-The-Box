@@ -6,7 +6,7 @@
 * Encoders
 * Encryptor
 * Obfuscators
-* Packers
+* Packer
 #
 
 
