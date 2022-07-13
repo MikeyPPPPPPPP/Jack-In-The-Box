@@ -1,7 +1,7 @@
 # Jack In The Box
 
 
-## A simple obfuscator for python files, this should get pass all static analysis.
+## A simple obfuscator for python files, this should get pass static analysis.
 
 * Encoders
 * Encryptor
