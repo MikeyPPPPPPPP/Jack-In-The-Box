@@ -32,6 +32,7 @@
 ./jackInTheBox.py -o strcla -i infile.py -f outfile.py
 ./jackInTheBox.py -r -i infile.py -f outfile.py
 ```
+More examples [here](https://www.youtube.com/watch?v=GLFhLyJUqRA&ab_channel=MichaelDProvenzano).
 #
 ### Install and dependencies:
 * Python 3.7+
@@ -39,5 +40,4 @@
 #
 ### Main contributor:
 Michael Provenzano @MikeyPPPPPPPP
-#
-### Demo https://www.youtube.com/watch?v=GLFhLyJUqRA&ab_channel=MichaelDProvenzano
+
