@@ -26,12 +26,12 @@ Packer
 
 #
 ### Example Usage:
-
-* ./jackInTheBox.py -e base64 -o ranenc -p -i infile.py -f outfile.py
-* ./jackInTheBox.py -E -e hex -p -i infile.py -f outfile.py
-* ./jackInTheBox.py -o strcla -i infile.py -f outfile.py
-* ./jackInTheBox.py -r -i infile.py -f outfile.py
-
+```
+./jackInTheBox.py -e base64 -o ranenc -p -i infile.py -f outfile.py
+./jackInTheBox.py -E -e hex -p -i infile.py -f outfile.py
+./jackInTheBox.py -o strcla -i infile.py -f outfile.py
+./jackInTheBox.py -r -i infile.py -f outfile.py
+```
 #
 ### Install and dependencies:
 * Python 3.7+
