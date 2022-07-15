@@ -10,19 +10,19 @@
 #
 
 
-Encoders
-* Base64
-* Hex
+**Encoders**
+1. Base64
+2. Hex
 
-Encryptor
-* polymorphic encrypter using the cryptography module
+**Encryptor**
+1. polymorphic encrypter using the cryptography module
 
-Obfuscators
-* ranenc:       This is a polymorphic ceaser cicher
-* strcla:       This is a polymorphic string builder 
+**Obfuscators**
+1. ranenc:       This is a polymorphic ceaser cicher
+2. strcla:       This is a polymorphic string builder 
 
-Packer
-* Gzip 
+**Packer**
+1. Gzip 
 
 #
 ### Example Usage:
