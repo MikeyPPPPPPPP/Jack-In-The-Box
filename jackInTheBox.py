@@ -2,13 +2,7 @@
 import random
 
 
-from utils.getArgs.gArgs import age
-from utils.packers import gzipPacker
-from utils.encoders import standard
-from utils.obfuscators import randomEncoder, stringClass
-from utils.encrypters import basicEncrypter
-
-
+import utils
 
 def boxEmUp(args):
     filedata = ""
@@ -19,25 +13,25 @@ def boxEmUp(args):
     
 
     if args.encoder == "base64":
-        s = standard.standardEncoding(filedata)
+        s = utils.standardEncoding(filedata)
         filedata = s.baseE64()
     if args.encoder == "hex":
-        s = standard.standardEncoding(filedata)
+        s = utils.standardEncoding(filedata)
         filedata = s.hexE()
 
     if args.obfu == "ranenc":
-        re = randomEncoder.encoderGenrator(filedata)
+        re = utils.encoderGenrator(filedata)
         filedata = re.codeGenrator()
     if args.obfu == "strcla":
-        sc = stringClass.stringObjuscator(filedata)
+        sc = utils.stringObjuscator(filedata)
         filedata = sc.obfuscat()
 
     if args.packer:
-        t = gzipPacker.packer(filedata)
+        t = utils.packer(filedata)
         filedata = t.returnString()
 
     if args.encryption:
-        ec = basicEncrypter.basicEncryption(filedata)
+        ec = utils.basicEncryption(filedata)
         filedata = ec.encrypt()
 
     if args.random:
@@ -46,22 +40,22 @@ def boxEmUp(args):
 
         for x in a:
             if x == 1:
-                s = standard.standardEncoding(filedata)
+                s = utils.standardEncoding(filedata)
                 filedata = s.baseE64()
             elif x == 2:
-                s = standard.standardEncoding(filedata)
+                s = utils.standardEncoding(filedata)
                 filedata = s.hexE()
             elif x == 3:
-                re = randomEncoder.encoderGenrator(filedata)
+                re = utils.encoderGenrator(filedata)
                 filedata = re.codeGenrator()
             elif x == 4:
-                sc = stringClass.stringObjuscator(filedata)
+                sc = utils.stringObjuscator(filedata)
                 filedata = sc.obfuscat()
             elif x == 5:
-                t = gzipPacker.packer(filedata)
+                t = utils.packer(filedata)
                 filedata = t.returnString()
             elif x == 6:
-                ec = basicEncrypter.basicEncryption(filedata)
+                ec = utils.basicEncryption(filedata)
                 filedata = ec.encrypt()
     if args.outfile:
         with open(args.outfile, 'w') as file:
@@ -75,7 +69,7 @@ def boxEmUp(args):
 def main():
     print("\n\tJack In The Box\nby Michael Provenzano")
     print("        \n\n\n                 What is anti-malware.\n\n\n !!! PYTHON file ONLY !!!")
-    arg = age()
+    arg = utils.age()
     args = arg.get_args()
 
     if args.encoders:
